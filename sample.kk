@@ -10,8 +10,50 @@ sample from iwashisnake
 ########################################################
 
 ########################################################
+import std/os/readline
 
+fun read-ints(): <console,exn> list<int>
+    readline().split(" ").map(fn(s) { s.parse-int.unjust })
+
+fun main()
+    val [n] = read-ints()
+    var c := vector(n, 0)
+    var a := vector(n, [])
+    for (0, n - 1) fn(i)
+        val [c'] = read-ints()
+        c[i] := c'
+        a[i] := read-ints()
+    val [x] = read-ints()
+    var min-count := Nothing
+    for (0, n - 1) fn(i)
+        if a[i].index-of(fn(a') { a' == x }) != -1 then
+            min-count := min-count.maybe(Just(c[i]), fn(mc) { Just(min(mc, c[i])) })
+    if min-count.is-nothing then
+        0.println
+        return ()
+    val min-count' = min-count.unjust
+    var res := []
+    for (0, n - 1) fn(i)
+        if a[i].index-of(fn(a') { a' == x }) != -1 && c[i] == min-count' then
+            res := Cons(i + 1, res)
+    res := res.reverse
+    res.length.println
+    res.foreach-indexed fn(i, j)
+        if i > 0 then
+            " ".print
+        j.print
+    "".println
 ########################################################
+import std/os/readline
+
+fun read-ints(): <console,exn> list<int>
+    readline().split(" ").map(fn(s) { s.parse-int.unjust })
+
+fun main()
+    val pi = "3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679"
+    val [n] = read-ints()
+    pi.first(n + 2).string.println
+
 ########################################################
 import std/os/file
 import std/os/path
