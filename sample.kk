@@ -8,7 +8,20 @@ sample from iwashisnake
 
 ########################################################
 ########################################################
+import std/os/readline
 
+fun read-ints(): <console,exn> list<int>
+    readline().split(" ").map(fn(s) { s.parse-int.unjust })
+
+fun main()
+    val _ = read-ints()
+    val a = read-ints()
+    val a1 = a.head.unjust
+    val ok = a.all(fn (ai) { ai == a1 })
+    if ok then
+        "Yes".println
+    else
+        "No".println
 ########################################################
 import std/os/readline
 
