@@ -12,6 +12,25 @@
 ############################################
 ############################################
 ############################################
+abc101_a [result CE]
+compile: Main.kk
+Main.kk(3, 5): error: invalid syntax
+ inline, noinline, rec, co, open, extend, value, reference, scoped or linear
+-------------------------------------------------
+
+import std/io
+let s = readline()
+let n = s.length()
+var ans = 0
+for (c in s) {
+  if (c == '+') {
+    ans += 1
+  } else {
+    ans -= 1
+  }
+}
+print(ans)
+
 ############################################
 ### abc098_a
 ### Main.kk(10,18): error: identifier a-b cannot be found
