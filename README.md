@@ -51,6 +51,10 @@ Kokaは静的型付け関数型言語で、Microsoft Researchで開発されま�
 ```
 ---
 ```
-
+数字入力
+val n = readline().parse-int.mbint
+if文の構成
+  if n==1 then
+  else
 ```
 ---
