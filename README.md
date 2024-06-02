@@ -8,9 +8,6 @@ https://koka-lang.github.io/koka/doc/book.html
 
 iwashisnake
 
-https://github.com/koka-lang/koka
-
-
 ---
 
 Kokaは静的型付け関数型言語で、Microsoft Researchで開発されました。Kokaの設計目標は、型システムと効果システムを組み合わせることで、安全性、パフォーマンス、およびプログラミングの表現力を向上させることでした。Kokaは並列性、非同期性、およびエラーハンドリングを効果的にサポートするように設計されています。
