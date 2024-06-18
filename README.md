@@ -47,7 +47,8 @@ https://koka-lang.github.io/koka/doc/book.html
 ```
 ---
 ```
-
+if文
+数字と記号の間にspaceが必要らしい
 ```
 ---
 ```
