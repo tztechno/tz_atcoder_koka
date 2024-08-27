@@ -43,7 +43,22 @@ https://koka-lang.github.io/koka/doc/book.html
 ```
 ---
 ```
-
+import std/os/readline
+fun main() {
+  val b = readline()
+  val ans = if (b == "A") {
+    "T"
+  } else if (b == "T") {
+    "A"
+  } else if (b == "C") {
+    "G"
+  } else if (b == "G") {
+    "C"
+  } else {
+    "Invalid input"
+  }
+  println(ans)
+}
 ```
 ---
 ```
